@@ -79,6 +79,8 @@
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#fringe-firms-entry-decision"><i class="fa fa-check"></i><b>2.1.1</b> Fringe firms’ entry decision</a></li>
 <li class="chapter" data-level="2.1.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#firms-initial-pricing-and-consumers-insurance-choice"><i class="fa fa-check"></i><b>2.1.2</b> Firms’ initial pricing and consumers’ insurance choice</a></li>
+<li class="chapter" data-level="2.1.3" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#firms-revised-pricing"><i class="fa fa-check"></i><b>2.1.3</b> Firms’ revised pricing</a></li>
+<li class="chapter" data-level="2.1.4" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#equilibrium"><i class="fa fa-check"></i><b>2.1.4</b> Equilibrium</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#estimation-results"><i class="fa fa-check"></i><b>2.2</b> Estimation Results</a></li>
 </ul></li>
@@ -139,6 +141,51 @@
 <p><span class="math display">\[
 \tilde{u}_{ij1} = \alpha u(y_{i}− p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \varepsilon_{ij}
 \]</span></p>
+<ul>
+<li>If consumer <span class="math inline">\(i\)</span> does not purchase any private LTCI, then her utility in stage 1 is given by
+<span class="math display">\[
+\tilde{u_{i01}} = \alpha u(y_{i}) + \varepsilon_{i0}
+\]</span></li>
+</ul>
+</div>
+<div id="firms-revised-pricing" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Firms’ revised pricing<a href="details-of-the-paper.html#firms-revised-pricing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>There are <span class="math inline">\(K\)</span> possible aggregate states of the world in stage 2, and each state happens with probability <span class="math inline">\(\Pi_{k}\)</span> where <span class="math inline">\(k = 1, ..., K\)</span></p></li>
+<li><p>When state <span class="math inline">\(k\)</span> is realized, insurers learn that the expected claims cost from their existing cohort of consumers is equal to <span class="math inline">\(\mu_{jk}\)</span>.</p></li>
+<li><p>Insurers then decide whether to increase the initial premium, and if so, by how much. Insurers are subject to the rate adjustment cost <span class="math inline">\(C^{rs}_{jk}(p_{j1} ,p_{jk2})\)</span>, which represents the cost associated with revising the premium from <span class="math inline">\(p_{j1}\)</span> to <span class="math inline">\(p_{jk2}\)</span> when the realized state is <span class="math inline">\(k\)</span> in stage 2.</p></li>
+<li><p>Insurer <span class="math inline">\(j\)</span>’s profit from the second stage when the realized state is <span class="math inline">\(k\)</span> is
+<span class="math display">\[
+\Pi =(p_{jk2} − \mu_{jk})s_{jk2} − C^{rs}_{jk}(p_{j1} ,p_{jk2})
+\]</span></p></li>
+<li><p>When the realized state is <span class="math inline">\(k\)</span>, consumer <span class="math inline">\(i\)</span>’s expected utility from holding the contract sold by insurer <span class="math inline">\(j\)</span> is</p></li>
+</ul>
+<p><span class="math display">\[
+\tilde{u}_{ijk} = (1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}
+\]</span></p>
+<ul>
+<li>The utility from retaining the current contract is given by</li>
+</ul>
+<p><span class="math display">\[
+u_{ijk, stay} = \alpha u(y_{i}−p_{jk2}) + \gamma I(j = J)\ln(n_{J}) + \xi_{j}
+\]</span></p>
+<ul>
+<li>The utility from terminating the contract is given by
+<span class="math display">\[
+u_{ik,lapse} = \int_{\lambda} \alpha u(y_{i} − oop(\lambda, y_{i}))f_{k}(\lambda) d\lambda
+\]</span></li>
+</ul>
+</div>
+<div id="equilibrium" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Equilibrium<a href="details-of-the-paper.html#equilibrium" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Consumers in the first period make insurance purchase decisions to maximize their lifetime utility.</p></li>
+<li><p>Consumer <span class="math inline">\(i\)</span>’s expected lifetime utility from contracting with insurer <span class="math inline">\(j \in \{1, ..., J \}\)</span> is
+<span class="math display">\[
+\tilde{v}_{ij} = \alpha u(y_{i} − p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \beta_{c}\sum_{k} \Pi((1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}) + \varepsilon_{ij}
+\]</span></p></li>
+<li><p>The consumer’s expected lifetime utility from not purchasing any insurance is</p></li>
+</ul>
 </div>
 </div>
 <div id="estimation-results" class="section level2 hasAnchor" number="2.2">

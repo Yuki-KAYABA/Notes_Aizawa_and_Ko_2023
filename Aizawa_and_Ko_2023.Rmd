@@ -68,6 +68,50 @@ $$
 \tilde{u}_{ij1} = \alpha u(y_{i}− p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \varepsilon_{ij}
 $$
 
+- If consumer $i$ does not purchase any private LTCI, then her utility in stage 1 is given by
+$$
+\tilde{u_{i01}} = \alpha u(y_{i}) + \varepsilon_{i0}
+$$
+
+### Firms’ revised pricing
+
+- There are $K$ possible aggregate states of the world in stage 2, and each state happens with probability $\Pi_{k}$ where $k = 1, ..., K$
+- When state $k$ is realized, insurers learn that the expected claims cost from their existing cohort of consumers is equal to $\mu_{jk}$.
+- Insurers then decide whether to increase the initial premium, and if so, by how much. Insurers are subject to the rate adjustment cost $C^{rs}_{jk}(p_{j1} ,p_{jk2})$, which represents the cost associated with revising the premium from $p_{j1}$ to $p_{jk2}$ when the realized state is $k$ in stage 2.
+- Insurer $j$’s profit from the second stage when the realized state is $k$ is
+$$
+\Pi =(p_{jk2} − \mu_{jk})s_{jk2} − C^{rs}_{jk}(p_{j1} ,p_{jk2})
+$$
+
+- When the realized state is $k$, consumer $i$’s expected utility from holding the contract sold by insurer $j$ is
+
+
+$$
+\tilde{u}_{ijk} = (1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}
+$$
+
+- The utility from retaining the current contract is given by
+
+$$
+u_{ijk, stay} = \alpha u(y_{i}−p_{jk2}) + \gamma I(j = J)\ln(n_{J}) + \xi_{j} 
+$$
+
+- The utility from terminating the contract is given by
+$$
+u_{ik,lapse} = \int_{\lambda} \alpha u(y_{i} − oop(\lambda, y_{i}))f_{k}(\lambda) d\lambda
+$$
+
+### Equilibrium
+
+- Consumers in the first period make insurance purchase decisions to maximize their lifetime utility. 
+- Consumer $i$’s expected lifetime utility from contracting with insurer $j \in \{1, ..., J \}$ is
+$$
+\tilde{v}_{ij} = \alpha u(y_{i} − p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \beta_{c}\sum_{k} \Pi((1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}) + \varepsilon_{ij}
+$$
+
+- The consumer’s expected lifetime utility from not purchasing any insurance is
+
+
 ## Estimation Results
 
 ![](Table_2.png)
