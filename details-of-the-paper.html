@@ -75,7 +75,12 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html"><i class="fa fa-check"></i><b>2</b> Details of the Paper</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.1</b> Model</a></li>
+<li class="chapter" data-level="2.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#model"><i class="fa fa-check"></i><b>2.1</b> Model</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#fringe-firms-entry-decision"><i class="fa fa-check"></i><b>2.1.1</b> Fringe firms’ entry decision</a></li>
+<li class="chapter" data-level="2.1.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#firms-initial-pricing-and-consumers-insurance-choice"><i class="fa fa-check"></i><b>2.1.2</b> Firms’ initial pricing and consumers’ insurance choice</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="details-of-the-paper.html"><a href="details-of-the-paper.html#estimation-results"><i class="fa fa-check"></i><b>2.2</b> Estimation Results</a></li>
 </ul></li>
 </ul>
 
@@ -99,7 +104,7 @@
 <div id="model" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Model<a href="details-of-the-paper.html#model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>There are M LTCI markets that are defined by a geographical state and calendar year</li>
+<li>There are <span class="math inline">\(M\)</span> LTCI markets that are defined by a geographical state and calendar year</li>
 <li>In each market, there exists a unit mass of potential consumers and many potential insurers</li>
 <li>There are three stages in the model (see Figure 5)
 <ul>
@@ -108,6 +113,38 @@
 <li>In stage 2, the uncertainty about aggregate risk is resolved, and insurers revise their price determined in the first stage. Consumers with private LTCI might lapse their contract, and LTC utilization takes place in the end.</li>
 </ul></li>
 </ul>
+<p><img src="Figure_5.png" /></p>
+<div id="fringe-firms-entry-decision" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Fringe firms’ entry decision<a href="details-of-the-paper.html#fringe-firms-entry-decision" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Fringe firms will enter the market if their expected profit is equal to or greater than their entry cost <span class="math inline">\(c^{e}\)</span>, which follows the CDF denoted by <span class="math inline">\(G\)</span>. - Once fringe firms enter, they will respectively earn the profit of</li>
+</ul>
+<p><span class="math display">\[
+\max \{\frac{1}{n_{J}} \Pi^{∗}_{J} −c^{e}, 0 \}
+\]</span></p>
+</div>
+<div id="firms-initial-pricing-and-consumers-insurance-choice" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Firms’ initial pricing and consumers’ insurance choice<a href="details-of-the-paper.html#firms-initial-pricing-and-consumers-insurance-choice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>At the beginning of stage 1, the market consists of <span class="math inline">\(J − 1\)</span> major firms and one representative fringe which is the collection of fringe entrants.</li>
+<li>Let <span class="math inline">\(j \in \{1, 2,..., J \}\)</span> index insurers where j$ = J$ means the representative fringe.</li>
+<li>Insurer <span class="math inline">\(j\)</span>’s profit in stage 1 is</li>
+</ul>
+<p><span class="math display">\[
+\Pi_{j1} = p_{j1}s_{j1} − C_{j}^{l}(p_{j1} − \tilde{\mu_{j}})
+\]</span></p>
+<ul>
+<li>Consumer <span class="math inline">\(i\)</span>’s flow utility from contracting with insurer <span class="math inline">\(j\)</span> in stage 1 is</li>
+</ul>
+<p><span class="math display">\[
+\tilde{u}_{ij1} = \alpha u(y_{i}− p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \varepsilon_{ij}
+\]</span></p>
+</div>
+</div>
+<div id="estimation-results" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Estimation Results<a href="details-of-the-paper.html#estimation-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="Table_2.png" /></p>
+<p><img src="Table_3.png" /></p>
 </div>
 </div>
             </section>
@@ -167,6 +204,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
