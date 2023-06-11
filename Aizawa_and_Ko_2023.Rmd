@@ -1,0 +1,48 @@
+---
+title: "Notes: Aizawa and Ko (2023) Dynamic Pricing Regulation and Welfare in Insurance Markets"
+author: "Yuki KAYABA"
+date: "6/11/2023"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
+output_dir: docs
+bookdown::gitbook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(bookdown)
+```
+
+# Summary of the Paper
+
+（ひとことメモ）
+
+
+## Motivation
+
+- 
+
+## Related Literature
+
+- 
+
+## Contribution
+
+- 
+
+# Details of the Paper
+
+## Model
+
+- There are M LTCI markets that are defined by a geographical state and calendar year
+- In each market, there exists a unit mass of potential consumers and many potential insurers 
+- There are three stages in the model (see Figure 5)
+  - In stage 0, insurers decide whether to enter the market based on the entry cost and the expected profit
+  - In stage 1, insurers set an initial price for their LTCI contract
+  - In stage 2, the uncertainty about aggregate risk is resolved, and insurers revise their price determined in the first stage. Consumers with private LTCI might lapse their contract, and LTC utilization takes place in the end.
+
+
+
+
+
