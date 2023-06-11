@@ -106,10 +106,16 @@ $$
 - Consumers in the first period make insurance purchase decisions to maximize their lifetime utility. 
 - Consumer $i$’s expected lifetime utility from contracting with insurer $j \in \{1, ..., J \}$ is
 $$
-\tilde{v}_{ij} = \alpha u(y_{i} − p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \beta_{c}\sum_{k} \Pi((1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}) + \varepsilon_{ij}
+\tilde{v}_{ij} = \alpha u(y_{i} − p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \beta_{c}\sum_{k} \pi_{k}((1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}) + \varepsilon_{ij}
 $$
 
 - The consumer’s expected lifetime utility from not purchasing any insurance is
+$$
+\tilde{v}_{0} = \alpha u(y_{i}) + \beta_{c} \sum_{k} \pi_{k} u_{ik, lapse} + \varepsilon_{i0}
+$$
+
+- If $j^{∗}$ is the chosen option by consumer $i$, then $j^{∗} = \mathop{\rm argmax}\limits_{j = 0, 1, ..., J} \tilde{v}_{ij}$.
+
 
 
 ## Estimation Results

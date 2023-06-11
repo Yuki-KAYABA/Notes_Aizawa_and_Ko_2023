@@ -182,9 +182,13 @@ u_{ik,lapse} = \int_{\lambda} \alpha u(y_{i} − oop(\lambda, y_{i}))f_{k}(\lamb
 <li><p>Consumers in the first period make insurance purchase decisions to maximize their lifetime utility.</p></li>
 <li><p>Consumer <span class="math inline">\(i\)</span>’s expected lifetime utility from contracting with insurer <span class="math inline">\(j \in \{1, ..., J \}\)</span> is
 <span class="math display">\[
-\tilde{v}_{ij} = \alpha u(y_{i} − p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \beta_{c}\sum_{k} \Pi((1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}) + \varepsilon_{ij}
+\tilde{v}_{ij} = \alpha u(y_{i} − p_{j1}) + \gamma I(j = J) \ln(n_{J}) + \xi_{j} + \beta_{c}\sum_{k} \pi_{k}((1 − \delta_{k})u_{ijk, stay} + \delta_{k}u_{ik, lapse}) + \varepsilon_{ij}
 \]</span></p></li>
-<li><p>The consumer’s expected lifetime utility from not purchasing any insurance is</p></li>
+<li><p>The consumer’s expected lifetime utility from not purchasing any insurance is
+<span class="math display">\[
+\tilde{v}_{0} = \alpha u(y_{i}) + \beta_{c} \sum_{k} \pi_{k} u_{ik, lapse} + \varepsilon_{i0}
+\]</span></p></li>
+<li><p>If <span class="math inline">\(j^{∗}\)</span> is the chosen option by consumer <span class="math inline">\(i\)</span>, then <span class="math inline">\(j^{∗} = \mathop{\rm argmax}\limits_{j = 0, 1, ..., J} \tilde{v}_{ij}\)</span>.</p></li>
 </ul>
 </div>
 </div>
