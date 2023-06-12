@@ -18,18 +18,27 @@ library(bookdown)
 
 （ひとことメモ）
 
+- 米国長期医療保険（long-term care insurance (LTCI)）市場におけるdynamic pricing regulation（保険者による、期中の保険料変更対する規制）に関する政策評価。
+- dynamic pricing regulationはrisk averseな消費者にとっては詳細の価格の不確実性が減少するというポジティブな影響がある一方、保険会社の価格設定の柔軟性が下がることによる利益の低下、さらには低い利益を見込むことにより市場参入が少なくなるといったネガティブな影響も考えられる。
+- 本論文ではDemand、Supply両方のモデル化→パラメータ推定→Counterfacturalによりdynamic pricing regulationによる経済厚生の変化をシミュレーションしている。
+- 結果、dynamic pricing regulationの強化はむしろ経済厚生を低下させる。これを緩和させる策として、（公的保険の）Medicaidの拡大を合わせて行うことを提案している。
 
 ## Motivation
 
-- 
+- To prevent insurers from passing through aggregate risks to consumers, governments have increasingly adopted dynamic pricing regulations that limit insurers' ability to change premiums over time. 
+- This paper develops and estimates an equilibrium model with dynamic pricing and firm entry and uses it to evaluate the design of dynamic pricing regulations in the U.S. long-term care insurance (LTCI) market. 
+- We find that stricter dynamic pricing regulation lowers social welfare as the benefit from improved premium stability is outweighed by the cost of reduced insurer participation. The welfare loss from stricter dynamic pricing regulation could be mitigated if the government also expands public LTCI through Medicaid.
 
-## Related Literature
 
-- 
+## Related Literature and Contribution
 
-## Contribution
-
-- 
+- This research contributes to three strands of literature on social insurance and insurance markets.
+  1. It contributes to the growing literature that evaluates the welfare effects of LTCI.
+    - Related Literature: Brown and Finkelstein (2008), Lockwood (2018), Ameriks et al. (2016), Mommaerts (2020) Ko, (2022),  Braun et al. (2019) 
+  1. This study is related to the large literature that investigates policy designs in insurance markets.
+    - Related Literature: Einav et al. (2010), Koijen and Yogo (2015, 2016), Koijen and Yogo (2022) 
+  1. Our work adds to the literature on long-term insurance. 
+    - Related Literature: Cochrane (1995) , Hendel and Lizzeri (2003), Handel et al. (2015), Handel et al. (2017), Fleitas et al. (2018), Atal (2019), Atal et al. (2020)  
 
 # Details of the Paper
 
@@ -116,6 +125,22 @@ $$
 
 - If $j^{∗}$ is the chosen option by consumer $i$, then $j^{∗} = \mathop{\rm argmax}\limits_{j = 0, 1, ..., J} \tilde{v}_{ij}$.
 
+- Insurers’ problem can be solved backwards. In stage 2, given the realized state $k$, each insurer $j$ chooses the revised premium by maximizing its state-specific profit:
+$$
+\Pi^{∗}_{jk2} = \max_{p_{jk2}}(p_{jk2} − \mu_jk)s_{jk2} − C^{rs}_{jk}(p_{j1} ,p_{jk2})
+$$
+
+- Given the optimal sequence of $\{ p_{jk2} \}^{K}_{k = 1}$ which is a function of the initial premium $p_{j1}$, insurer $j$ in stage 1 chooses $p_{j1}$ to maximize its profit over the lifetime of LTCI contracts: 
+$$
+\Pi^{∗}_{j} = \max_{p_{j1}} p_{j1}s_{j1} −C^{l}_{j}(p_{j1} - \tilde{\mu}_{j}) + \beta_{f}\sum_{k}\pi_{k}\Pi^{∗}_{jk2}
+$$
+
+- In stage 0, a fringe firm with entry cost $c^{e}$ will enter the market if
+$$
+c^{e} \leq \frac{1}{n_{J}} \Pi^{∗}_{J}
+$$
+
+- We characterize a Nash equilibrium in each market that consists of the vector of premiums $(p_{j1},\{ p_{jk2} \}^{K}_{k = 1})$ for each insurer $j$ and the number of fringe insurers $n_{J}$ that solve above equations.
 
 
 ## Estimation Results
@@ -124,11 +149,20 @@ $$
 
 ![](Table_3.png)
 
+## Counterfactuals
 
+- In this paper, three counterfactuals are conducted:
+ 1. Welfare effect of rate stability regulation
+ 
+![](Figure_6.png) 
+ 
+ 2. Value of commitment
+ 
+![](Table_4.png) 
+ 
+ 3. Interaction between rate stability regulation and Medicaid
 
-
-
-
+![](Figure_7.png)
 
 
 
