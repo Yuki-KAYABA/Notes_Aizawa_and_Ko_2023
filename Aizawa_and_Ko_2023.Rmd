@@ -153,14 +153,13 @@ $$
 
 - In this paper, three counterfactuals are conducted:
  1. Welfare effect of rate stability regulation
- 
-![](Figure_6.png) 
- 
- 2. Value of commitment
- 
-![](Table_4.png) 
- 
+  2. Value of commitment
  3. Interaction between rate stability regulation and Medicaid
+
+
+![](Figure_6.png)
+
+![](Table_4.png)
 
 ![](Figure_7.png)
 
